@@ -65,10 +65,6 @@ function firePurchaseToast() {
       </div>
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-1.5">
-          <ShoppingBag
-            className="size-3.5 shrink-0"
-            style={{ color: "#2c5f8d" }}
-          />
           <span
             style={{ color: "#2c5f8d", fontWeight: 700, fontSize: "0.8rem" }}
           >
