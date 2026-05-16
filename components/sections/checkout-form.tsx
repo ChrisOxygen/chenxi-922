@@ -43,7 +43,7 @@ function FieldError({ message }: { message?: string }) {
 }
 
 const INPUT_CLASS =
-  "border-brand-primary/60 focus-visible:border-brand-primary bg-transparent text-white h-10";
+  "border-brand-primary/60 focus-visible:border-brand-primary bg-transparent text-brand-dark h-10";
 
 function isSameData(a: CheckoutFormValues, b: CheckoutFormValues) {
   const keys: (keyof CheckoutFormValues)[] = [
@@ -94,7 +94,7 @@ export default function CheckoutForm() {
   }
 
   return (
-    <section className="bg-black py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8  items-start">
         {/* Left — product summary, sticky on lg+ */}
         <div className="flex flex-col justify-self-center w-full max-w-2xl lg:max-w-full gap-6 lg:sticky lg:top-8">
@@ -119,13 +119,13 @@ export default function CheckoutForm() {
             {COPY.PACKAGE_HEADING}
           </h2>
 
-          <div className="flex flex-col gap-3 px-2 font-heading">
+          <div className="flex flex-col gap-3 px-2 font-heading text-brand-primary-light">
             {LINE_ITEMS.map(({ label, price }) => (
               <div key={label} className="flex gap-2 items-center min-w-0">
                 <span className="text-sm sm:text-base font-semibold shrink-0">
                   {label}
                 </span>
-                <span className="shrink w-full border-dashed border-b-4 border-white" />
+                <span className="shrink w-full border-dashed border-b-4 border-brand-primary-light" />
                 <span className="text-sm sm:text-base font-semibold shrink-0">
                   {formatNaira(price)}
                 </span>
@@ -205,7 +205,7 @@ export default function CheckoutForm() {
                     {QUANTITY_OPTIONS.map((opt) => (
                       <label
                         key={opt.value}
-                        className="flex items-center gap-2.5 cursor-pointer text-xs sm:text-sm text-white"
+                        className="flex items-center gap-2.5 cursor-pointer text-xs sm:text-sm text-brand-dark"
                       >
                         <RadioGroupItem
                           value={opt.value}
@@ -239,7 +239,7 @@ export default function CheckoutForm() {
                 id="deliveryAddress"
                 rows={4}
                 {...register("deliveryAddress")}
-                className="border-brand-primary/60 focus-visible:border-brand-primary bg-transparent text-white min-h-[100px]"
+                className="border-brand-primary/60 focus-visible:border-brand-primary bg-transparent text-brand-dark min-h-[100px]"
               />
               <FieldError message={errors.deliveryAddress?.message} />
             </FieldWrapper>
@@ -257,7 +257,7 @@ export default function CheckoutForm() {
             <button
               type="submit"
               disabled={isPending}
-              className="gold-cta w-full py-4 text-black font-heading font-semibold text-lg sm:text-xl rounded mt-2 flex items-center justify-center gap-2.5 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="bg-brand-primary-light w-full py-4 text-white font-heading font-semibold text-lg sm:text-xl rounded mt-2 flex items-center justify-center gap-2.5 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isPending ? (
                 <>

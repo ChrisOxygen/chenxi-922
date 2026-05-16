@@ -57,7 +57,7 @@ function firePurchaseToast() {
     <div className="flex items-center gap-3">
       <div className="relative size-14 shrink-0 overflow-hidden rounded">
         <Image
-          src="/assets/nibosi-watch-gold-red-display-cushion.jpeg"
+          src="/assets/imgi_7_download-2-rg6xxqwsijc0uzrwewd9beu9p2i2v1qtk1dba8v1c8.webp"
           alt="Nibosi Ruby Prestige"
           fill
           className="object-cover"
@@ -67,16 +67,16 @@ function firePurchaseToast() {
         <div className="flex items-center gap-1.5">
           <ShoppingBag
             className="size-3.5 shrink-0"
-            style={{ color: "#d4af37" }}
+            style={{ color: "#2c5f8d" }}
           />
           <span
-            style={{ color: "#d4af37", fontWeight: 700, fontSize: "0.8rem" }}
+            style={{ color: "#2c5f8d", fontWeight: 700, fontSize: "0.8rem" }}
           >
             Selling Fast!
           </span>
         </div>
         <span
-          style={{ color: "#ffffff", fontSize: "0.78rem", lineHeight: "1.35" }}
+          style={{ color: "#000000", fontSize: "0.78rem", lineHeight: "1.35" }}
         >
           {copy}
         </span>
@@ -87,11 +87,11 @@ function firePurchaseToast() {
       duration: 5000,
       closeButton: true,
       style: {
-        background: "#272724",
-        border: "1px solid #d4af37",
-        color: "#ffffff",
+        background: "#DAE8F1",
+        border: "1px solid #2c5f8d",
+        color: "#000000",
         borderRadius: "0.5rem",
-        boxShadow: "0 4px 24px rgba(212,175,55,0.15)",
+        boxShadow: "0 4px 24px rgba(44,95,141,0.20)",
         padding: "0.75rem",
       },
     },

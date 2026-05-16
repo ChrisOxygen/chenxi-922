@@ -24,7 +24,7 @@ export default function ThankYou() {
 
   return (
     <div
-      className="relative min-h-screen flex items-center bg-black overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden"
       style={{
         backgroundImage:
           "url('/assets/nibosi-watch-gold-red-leather-wood.jpeg')",
@@ -32,7 +32,7 @@ export default function ThankYou() {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-black/95" />
+      <div className="absolute inset-0 bg-background/95" />
 
       <div className="relative z-10 w-full max-w-2xl mx-auto px-5 sm:px-8 py-10 flex flex-col gap-6">
         <GoldRule />
@@ -43,28 +43,28 @@ export default function ThankYou() {
             Order Confirmed —<br />
             You&apos;re Our Lucky #{PRODUCT.LUCKY_NUMBER}!
           </h1>
-          <p className="font-semibold text-lg sm:text-xl text-white/90">
+          <p className="font-semibold text-lg sm:text-xl text-brand-primary-light/90">
             Congratulations,{" "}
             <span className="text-brand-primary">{displayName}</span>!
           </p>
         </div>
 
         {/* Body */}
-        <div className="flex flex-col gap-3 text-white/80 text-base sm:text-lg leading-relaxed">
+        <div className="flex flex-col gap-3 text-foreground/80 text-base sm:text-lg leading-relaxed">
           <p>
             You&apos;re officially our{" "}
             <span className="text-brand-primary font-semibold">
               {PRODUCT.LUCKY_NUMBER}th customer today
             </span>{" "}
-            — and {PRODUCT.LUCKY_NUMBER} has always been our lucky number. Since you hit
-            that magic spot, we&apos;re throwing in an{" "}
-            <strong className="text-white">extra free gift</strong> with your{" "}
-            {PRODUCT.NAME} order.
+            — and {PRODUCT.LUCKY_NUMBER} has always been our lucky number. Since
+            you hit that magic spot, we&apos;re throwing in an{" "}
+            <strong className="text-foreground">extra free gift</strong> with
+            your {PRODUCT.NAME} order.
           </p>
         </div>
 
         {/* WhatsApp CTA */}
-        <p className="text-white/80 text-base sm:text-lg ">
+        <p className="text-black/80 text-base sm:text-lg ">
           Your package is ready — want it at your doorstep{" "}
           <span className="text-brand-primary font-semibold">
             before the day is over?
