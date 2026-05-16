@@ -10,7 +10,7 @@ export default function PricingTotals() {
       <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-primary text-center">
         Order Today : {formatNaira(PRICING.OFFER)}
       </h2>
-      <PricingCTA />
+      <PricingCTA arrowColor="black" />
     </div>
   );
 }

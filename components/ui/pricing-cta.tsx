@@ -8,10 +8,12 @@ import { PRICING, formatNaira } from "@/constants/pricing";
 
 type Props = {
   variant?: "hero" | "default";
+  arrowColor?: "white" | "black";
 };
 
-export default function PricingCTA({ variant = "default" }: Props) {
+export default function PricingCTA({ variant = "default", arrowColor = "white" }: Props) {
   const isHero = variant === "hero";
+  const arrowFilter = arrowColor === "black" ? "brightness(0)" : "brightness(0) invert(1)";
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
@@ -33,6 +35,7 @@ export default function PricingCTA({ variant = "default" }: Props) {
             ? "hidden md:block absolute top-5 -left-25 w-20 h-[120%]"
             : "hidden md:block absolute -rotate-45 -top-20 md:-top-30 -left-25 w-20 h-[120%]"
         }
+        style={{ filter: arrowFilter }}
       />
       <Image
         alt=""
@@ -44,6 +47,7 @@ export default function PricingCTA({ variant = "default" }: Props) {
             ? "hidden md:block absolute top-5 -right-25 w-20 h-[120%]"
             : "hidden md:block absolute -top-20 md:-top-30  rotate-45 -right-25 w-20 h-[120%]"
         }
+        style={{ filter: arrowFilter }}
       />
       <button
         onClick={handleClick}
