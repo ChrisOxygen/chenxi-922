@@ -28,11 +28,12 @@ export default function Testimonials() {
                 src={src}
                 width={1000}
                 height={1000}
+                sizes="(max-width: 640px) 100vw, 300px"
                 className="w-full sm:w-1/2 sm:max-w-[300px] object-cover"
               />
             ))}
           </div>
-          <PricingTotals />
+          <PricingTotals location="testimonials" />
         </div>
       </div>
     </section>

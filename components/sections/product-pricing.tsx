@@ -14,6 +14,7 @@ export default function ProductPricing() {
               src={PRODUCT_IMAGES.WATCH_PRICING}
               width={1000}
               height={1000}
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 40vw, 350px"
               className="h-[180px] sm:h-[260px] md:h-[350px] w-1/2 object-cover"
             />
             <Image
@@ -21,6 +22,7 @@ export default function ProductPricing() {
               src={PRODUCT_IMAGES.BRACELET}
               width={1000}
               height={1000}
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 40vw, 350px"
               className="h-[180px] sm:h-[260px] md:h-[350px] w-1/2 object-cover"
             />
           </div>
@@ -37,7 +39,7 @@ export default function ProductPricing() {
               </div>
             ))}
           </div>
-          <PricingTotals />
+          <PricingTotals location="product_pricing" />
         </div>
       </div>
     </section>

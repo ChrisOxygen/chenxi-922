@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 import { GUARANTEE_ITEMS } from "@/constants/guarantee";
 import { COPY } from "@/constants/copy";
@@ -5,9 +6,12 @@ import { COPY } from "@/constants/copy";
 export default function Guarantee() {
   return (
     <section className="relative overflow-hidden text-background section-y-p">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/black-gears-texture.jpeg')" }}
+      <Image
+        src="/assets/black-gears-texture.jpeg"
+        fill
+        alt=""
+        sizes="100vw"
+        className="object-cover object-center"
       />
       <div className="absolute inset-0 bg-brand-primary/95" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10 items-center">

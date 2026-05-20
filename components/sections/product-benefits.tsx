@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaTimesCircle, FaCheckCircle } from "react-icons/fa";
 import {
   OTHER_WATCHES,
@@ -7,16 +8,14 @@ import { COPY } from "@/constants/copy";
 
 export default function ProductBenefits() {
   return (
-    <section
-      className="section-y-p relative"
-      style={{
-        backgroundImage:
-          "url('/assets/imgi_6_imgi_99_7-rg6xx2gzkuekh4redlsyil0a91ujax1ssoeot1v9u0.webp')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
-    >
+    <section className="section-y-p relative">
+      <Image
+        src="/assets/imgi_6_imgi_99_7-rg6xx2gzkuekh4redlsyil0a91ujax1ssoeot1v9u0.webp"
+        fill
+        alt=""
+        sizes="100vw"
+        className="object-cover object-center"
+      />
       <div className="absolute inset-0 bg-brand-primary/90 pointer-events-none" />
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:items-center gap-10">
         <h2 className="text-background text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold max-w-4xl sm:text-center">

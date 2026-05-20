@@ -1,40 +1,15 @@
-"use client";
-
 import Image from "next/image";
 import { FaRegCheckSquare } from "react-icons/fa";
 import { WATCH_FEATURES } from "@/constants/product-details";
 import { PRODUCT, PRODUCT_IMAGES } from "@/constants/product";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import WatchGalleryCarousel from "@/components/sections/watch-gallery-carousel";
 
 function WatchDetails() {
   return (
     <div className="flex flex-col gap-4 w-full border-3 border-brand-primary p-4">
       {/* Mobile: autoplay slider, one image at a time */}
       <div className="sm:hidden w-full overflow-hidden">
-        <Carousel
-          plugins={[Autoplay({ delay: 2500, stopOnInteraction: false })]}
-          opts={{ loop: true }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-0">
-            {PRODUCT_IMAGES.WATCH_GALLERY.map((src, i) => (
-              <CarouselItem key={i} className="pl-0 basis-full">
-                <Image
-                  alt={PRODUCT.WATCH_NAME}
-                  src={src}
-                  width={1000}
-                  height={1000}
-                  className="w-full object-cover"
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+        <WatchGalleryCarousel />
       </div>
 
       {/* Desktop: side-by-side */}
@@ -46,6 +21,7 @@ function WatchDetails() {
             src={src}
             width={1000}
             height={1000}
+            sizes="33vw"
             className="basis-1/3 w-[200px] object-cover"
           />
         ))}
@@ -81,6 +57,7 @@ function BraceletDetails() {
         src={PRODUCT_IMAGES.BRACELET}
         width={1000}
         height={1000}
+        sizes="(max-width: 640px) 100vw, 25vw"
         className="w-full sm:basis-1/4 sm:w-auto h-[300px] sm:h-[210px] object-cover"
       />
       <div className="flex flex-col gap-2 justify-center">
