@@ -12,7 +12,7 @@ export const PRODUCT = {
     "Ready to make your statement with the Chenxi Azure Steel watch? We deliver right to your doorstep in Lagos, Abuja, and port harcourt. You only pay when your presidential timepiece arrives safely in your hands",
   LUCKY_NUMBER: 7,
   DELIVERY_REGION: "Lagos State and Port Harcourt",
-  WHATSAPP_NUMBER: "2348000000000",
+  WHATSAPP_NUMBER: "2348023101492",
   WHATSAPP_MESSAGE:
     "Hi! I just placed an order for the Chenxi Azure Steel watch set and I'm ready for delivery today!",
 } as const;
